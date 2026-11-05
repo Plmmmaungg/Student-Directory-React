@@ -1,0 +1,136 @@
+/* Universal style*/
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: normal;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+/* Header*/
+header{
+  padding: 30px 30px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 3px 3px rgba(09, 29, 0, 1);
+  border-radius: 28px ;
+  background-color: #fbfafa;
+}
+
+header > h1{
+  font-size: xx-large;
+}
+header > small{
+  color: red;
+}
+
+/*Form Style*/
+#formContainer{
+  padding: 30px 30px;
+  margin: 20px;
+  text-align: left;
+  box-shadow: 3px 3px rgba(09, 29, 0, 1);
+  border-radius: 28px;
+  
+  
+}
+
+#formContainer > #studentForm > .input-fields > label{
+  display: flex;
+  padding: 5px 0px 0px 5px;
+  
+}
+#formContainer > #studentForm > .input-fields{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+  
+}
+  #formContainer > #studentForm > .input-fields > input {
+    width: 100%;     
+    height: 40px; 
+    border-radius: 20px;
+   margin: 5px 0px 10px 0px;
+   border: 1px solid #ccc;
+}
+
+/* button add*/
+.add-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* delete button */
+.dlte {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+#studentList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    /* justify-content: center; */
+    color: #726969;
+  
+}
+
+.list-item {
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(250, 248, 248);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#studentList  {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    font-size: 18px;
+    color: #333;
+}
+
+/* responsive design */
+/* mobile */
+@media (width <= 320px) {
+  #studentList > .list-item {
+    grid-column: span 12;
+  }
+}
+
+/* Tablet */
+@media (width > 320px) and (width <= 600px) {
+  #studentList > .list-item {
+    grid-column: span 4;
+  }
+}
+
+/* Desktop */
+@media (width >= 1000px) {
+  #studentList > .list-item {
+    grid-column: span 2;
+  }
+}
